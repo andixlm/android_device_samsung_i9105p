@@ -81,6 +81,9 @@ BOARD_RIL_CLASS := ../../../device/samsung/s2vep/ril/
 TARGET_RECOVERY_FSTAB := device/samsung/s2vep/fstab.capri_ss_s2vep
 TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/class/android_usb/android0/f_mass_storage/lun%d/file"
 
+# healthd
+BOARD_HAL_STATIC_LIBRARIES := libhealthd.capri
+
 # SELinux
 BOARD_SEPOLICY_DIRS += \
     device/samsung/s2vep/sepolicy
