@@ -1,7 +1,7 @@
 #!/bin/sh
 
 VENDOR=samsung
-DEVICE=s2vep
+DEVICE=galaxys2plus-common
 
 BASE=../../../vendor/$VENDOR/$DEVICE/proprietary
 
