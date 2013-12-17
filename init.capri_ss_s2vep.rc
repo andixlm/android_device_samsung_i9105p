@@ -50,7 +50,9 @@ on init
     symlink /storage/usbdisk0 /usbdisk0
     symlink /storage/usbdisk0 /mnt/usbdisk0
 
-    # Vibetonz
+    mkdir /preload 0771 system system 
+
+# Vibetonz
     export VIBE_PIPE_PATH /dev/pipes
     mkdir /dev/pipes 0771 shell shell
 
@@ -195,14 +197,14 @@ on boot
 
     symlink /dev/block/mmcblk0p11 /dev/block/param
 
-    # Permissions for bluetooth
+# Permissions for bluetooth
     setprop ro.bt.bdaddr_path "/efs/bluetooth/bt_addr"
-    chown bluetooth net_bt_stack ro.bt.bdaddr_path
-    chown bluetooth net_bt_stack /dev/ttyS2
-    chmod 0600 /dev/ttyS2
+    chown bluetooth bluetooth ro.bt.bdaddr_path
+#    chown bluetooth bluetooth /dev/ttySAC0
+#    chmod 0600 /dev/ttySAC0
     chmod 0660 /sys/class/rfkill/rfkill0/state
-    chown bluetooth net_bt_stack /sys/class/rfkill/rfkill0/state
-    chown bluetooth net_bt_stack /sys/class/rfkill/rfkill0/type
+    chown bluetooth bluetooth /sys/class/rfkill/rfkill0/state
+    chown bluetooth bluetooth /sys/class/rfkill/rfkill0/type
 
     # permissions for sensors (accelerometer & magnetic & proximity)
     chown root system /dev/proximity
@@ -443,6 +445,10 @@ on boot
     # allow user space (atx) access to kernel pm debug
     chown system system /sys/module/capri_pm_dbg/parameters/debug
 
+#for bluetooth. permission for host interface
+    chown root bluetooth /dev/ttyS2
+    chmod 0777 /dev/ttyS2
+
     # for fm radio
     copy /system/etc/local.prop /data/local.prop
     chown system bluetooth /data/local.prop
@@ -628,13 +634,6 @@ service powersnd /system/bin/samsungpowersoundplay
     user media
     group system
     disabled
-    oneshot
-
-# Vibetonz
-service immvibed /system/bin/immvibed
-    class core
-    user shell
-    group shell
     oneshot
 
 # fusewrapped external sdcard daemon running as media_rw (1023)

@@ -19,6 +19,7 @@ PRODUCT_COPY_FILES += \
 	device/samsung/s2vep/lpm.rc:root/lpm.rc \
 	device/samsung/s2vep/ueventd.capri_ss_s2vep.rc:root/ueventd.capri_ss_s2vep.rc \
 	device/samsung/s2vep/fstab.capri_ss_s2vep:root/fstab.capri_ss_s2vep \
+	device/samsung/s2vep/init.bt.rc:root/init.bt.rc \
 
 PRODUCT_COPY_FILES += \
 	device/samsung/s2vep/media_codecs.xml:system/etc/media_codecs.xml \

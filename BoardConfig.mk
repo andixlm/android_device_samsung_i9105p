@@ -27,7 +27,7 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 
 # Kernel
 TARGET_KERNEL_CONFIG := cyanogenmod_s2vep_defconfig
-
+TARGET_KERNEL_SOURCE := kernel/samsung/galaxys2plus-common
 BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_HAS_LARGE_FILESYSTEM := true
 
