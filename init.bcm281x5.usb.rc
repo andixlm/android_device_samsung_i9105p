@@ -50,9 +50,9 @@ on property:sys.usb.config=ptp
     write /sys/class/android_usb/android0/enable 0
     write /sys/class/android_usb/android0/idVendor 04e8
     write /sys/class/android_usb/android0/idProduct 6865
-    write /sys/class/android_usb/android0/bDeviceClass 0
-    write /sys/class/android_usb/android0/bDeviceSubClass 0
-    write /sys/class/android_usb/android0/bDeviceProtocol 0
+    write /sys/class/android_usb/android0/bDeviceClass ef
+    write /sys/class/android_usb/android0/bDeviceSubClass 02
+    write /sys/class/android_usb/android0/bDeviceProtocol 01
     write /sys/class/android_usb/android0/functions $sys.usb.config
     write /sys/class/android_usb/android0/enable 1
     setprop sys.usb.state $sys.usb.config
@@ -61,9 +61,9 @@ on property:sys.usb.config=ptp,adb
     write /sys/class/android_usb/android0/enable 0
     write /sys/class/android_usb/android0/idVendor 04e8
     write /sys/class/android_usb/android0/idProduct 6866
-    write /sys/class/android_usb/android0/bDeviceClass 0
-    write /sys/class/android_usb/android0/bDeviceSubClass 0
-    write /sys/class/android_usb/android0/bDeviceProtocol 0
+    write /sys/class/android_usb/android0/bDeviceClass ef
+    write /sys/class/android_usb/android0/bDeviceSubClass 02
+    write /sys/class/android_usb/android0/bDeviceProtocol 01
     write /sys/class/android_usb/android0/functions $sys.usb.config
     write /sys/class/android_usb/android0/enable 1
     start adbd
@@ -161,7 +161,7 @@ service usb_network /system/bin/sh /etc/usb_network.sh prop
 # When coming up from a persistent rndis mode we need to
 # enable the rndis0 network
 on property:persist.sys.usb.config=rndis
-	setprop net.setcfg.rndis0 up
+    setprop net.setcfg.rndis0 up
 
 on property:persist.sys.usb.config=rndis,adb
 	setprop net.setcfg.rndis0 up
