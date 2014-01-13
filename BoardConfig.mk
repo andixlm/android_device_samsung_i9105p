@@ -76,14 +76,14 @@ BOARD_CHARGING_MODE_BOOTING_LPM := /sys/class/power_supply/battery/batt_lp_charg
 BOARD_RIL_CLASS := ../../../device/samsung/s2vep/ril/
 
 # Recovery
-TARGET_RECOVERY_FSTAB := device/samsung/s2vep/fstab.capri_ss_s2vep
+TARGET_RECOVERY_FSTAB := device/samsung/s2vep/ramdisk/fstab.capri_ss_s2vep
 TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/class/android_usb/android0/f_mass_storage/lun%d/file"
 
 # healthd
 BOARD_HAL_STATIC_LIBRARIES := libhealthd.capri
 
 # CMHW
-BOARD_HARDWARE_CLASS := device/samsung/i9082/cmhw/
+BOARD_HARDWARE_CLASS := device/samsung/s2vep/cmhw/
 
 # SELinux
 BOARD_SEPOLICY_DIRS += \
