@@ -12,24 +12,24 @@ DEVICE_PACKAGE_OVERLAYS += device/samsung/s2vep/overlay
 
 # Init files
 PRODUCT_COPY_FILES += \
-	device/samsung/s2vep/init.capri_ss_s2vep.rc:root/init.capri_ss_s2vep.rc \
-	device/samsung/s2vep/init.bcm281x5.usb.rc:root/init.bcm281x5.usb.rc \
-	device/samsung/s2vep/init.log.rc:root/init.log.rc \
-	device/samsung/s2vep/init.recovery.capri_ss_s2vep.rc:root/init.recovery.capri_ss_s2vep.rc \
-	device/samsung/s2vep/lpm.rc:root/lpm.rc \
-	device/samsung/s2vep/ueventd.capri_ss_s2vep.rc:root/ueventd.capri_ss_s2vep.rc \
-	device/samsung/s2vep/fstab.capri_ss_s2vep:root/fstab.capri_ss_s2vep 
+	device/samsung/s2vep/ramdisk/init.capri_ss_s2vep.rc:root/init.capri_ss_s2vep.rc \
+	device/samsung/s2vep/ramdisk/init.bcm281x5.usb.rc:root/init.bcm281x5.usb.rc \
+	device/samsung/s2vep/ramdisk/init.log.rc:root/init.log.rc \
+	device/samsung/s2vep/ramdisk/init.recovery.capri_ss_s2vep.rc:root/init.recovery.capri_ss_s2vep.rc \
+	device/samsung/s2vep/ramdisk/lpm.rc:root/lpm.rc \
+	device/samsung/s2vep/ramdisk/ueventd.capri_ss_s2vep.rc:root/ueventd.capri_ss_s2vep.rc \
+	device/samsung/s2vep/ramdisk/fstab.capri_ss_s2vep:root/fstab.capri_ss_s2vep 
 
 PRODUCT_COPY_FILES += \
 	device/samsung/s2vep/media_codecs.xml:system/etc/media_codecs.xml \
 
 # Prebuilt kl keymaps
 PRODUCT_COPY_FILES += \
-	device/samsung/s2vep/bcm_headset.kl:system/usr/keylayout/bcm_headset.kl \
-	device/samsung/s2vep/bcm_keypad_v2.kl:system/usr/keylayout/bcm_keypad_v2.kl \
-	device/samsung/s2vep/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
-	device/samsung/s2vep/samsung-keypad.kl:system/usr/keylayout/samsung-keypad.kl \
-	device/samsung/s2vep/sii9234_rcp.kl:system/usr/keylayout/sii9234_rcp.kl
+	device/samsung/s2vep/keylayouts/bcm_headset.kl:system/usr/keylayout/bcm_headset.kl \
+	device/samsung/s2vep/keylayouts/bcm_keypad_v2.kl:system/usr/keylayout/bcm_keypad_v2.kl \
+	device/samsung/s2vep/keylayouts/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
+	device/samsung/s2vep/keylayouts/samsung-keypad.kl:system/usr/keylayout/samsung-keypad.kl \
+	device/samsung/s2vep/keylayouts/sii9234_rcp.kl:system/usr/keylayout/sii9234_rcp.kl
 
 # Filesystem management tools
 PRODUCT_PACKAGES += \
@@ -54,6 +54,10 @@ PRODUCT_PACKAGES += \
 	charger \
 	charger_res_images
 
+# Device Settings
+PRODUCT_PACKAGES += \
+	BCMSettings
+
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
@@ -73,6 +77,10 @@ PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml \
 	frameworks/native/data/etc/android.hardware.usb.accessory.xml:system/etc/permissions/android.hardware.usb.accessory.xml \
 	packages/wallpapers/LivePicker/android.software.live_wallpaper.xml:system/etc/permissions/android.software.live_wallpaper.xml
+
+# Vibration
+PRODUCT_COPY_FILES += \
+	device/samsung/s2vep/DeviceSettings/libs/libImmEmulatorJ.so:system/lib/libImmEmulatorJ.so
 
 # Support for Browser's saved page feature. This allows
 # for pages saved on previous versions of the OS to be
