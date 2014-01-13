@@ -72,14 +72,17 @@ public class DeviceSettings extends FragmentActivity {
 		mTabsAdapter.addTab(
 				bar.newTab().setText(R.string.category_general_title),
 				GeneralFragmentActivity.class, null);
-		mTabsAdapter.addTab(bar.newTab()
-				.setText(R.string.category_screen_title),
+		mTabsAdapter.addTab(
+				bar.newTab().setText(R.string.category_screen_title),
 				ScreenFragmentActivity.class, null);
 		mTabsAdapter.addTab(bar.newTab().setText(R.string.category_usb_title),
 				USBFragmentActivity.class, null);
 		mTabsAdapter.addTab(
 				bar.newTab().setText(R.string.category_advanced_title),
 				AdvancedFragmentActivity.class, null);
+		mTabsAdapter.addTab(
+				bar.newTab().setText(R.string.category_vibration_title),
+				VibrationFragmentActivity.class, null);
 
 		if (savedInstanceState != null) {
 			bar.setSelectedNavigationItem(savedInstanceState.getInt("tab", 0));

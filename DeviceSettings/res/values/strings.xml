@@ -69,5 +69,7 @@
     <string name="mmc_subcat_title">MMC</string>
     <string name="use_spi_crc_title_head">Disable SPI CRC</string>
     <string name="use_spi_crc_summary_head">Disabling SPI CRC can improve mmc performance (10% - 30%) but phone may freeze randomly</string>
-    
+
+    <!-- TAB: VIBRATION -->
+    <string name="action_settings">Settings</string>
 </resources>
