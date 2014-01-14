@@ -13,7 +13,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 
-public class VibBroacastReceiver extends BroadcastReceiver{
+public class VibBroadcastReceiver extends BroadcastReceiver{
 
 	public static final String PREFS_NAME = "Vib_prefs";
 	static boolean ringing = false;
