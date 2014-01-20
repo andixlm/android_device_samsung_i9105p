@@ -78,10 +78,6 @@ PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/android.hardware.usb.accessory.xml:system/etc/permissions/android.hardware.usb.accessory.xml \
 	packages/wallpapers/LivePicker/android.software.live_wallpaper.xml:system/etc/permissions/android.software.live_wallpaper.xml
 
-# Vibration
-PRODUCT_COPY_FILES += \
-	device/samsung/s2vep/DeviceSettings/libs/libImmEmulatorJ.so:system/lib/libImmEmulatorJ.so
-
 # Support for Browser's saved page feature. This allows
 # for pages saved on previous versions of the OS to be
 # viewed on the current OS.
@@ -145,6 +141,9 @@ else
 endif
 
 
+PRODUCT_COPY_FILES += \
+        device/samsung/s2vep/vibration/haptic_vib.apk:system/app/haptic_vib.apk \
+        device/samsung/s2vep/vibration/libImmEmulatorJ.so:system/lib/libImmEmulatorJ.so
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
