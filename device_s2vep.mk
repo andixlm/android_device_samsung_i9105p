@@ -140,11 +140,6 @@ else
         NFCEE_ACCESS_PATH := $(LOCAL_PATH)/nfc/nfcee_access_debug.xml
 endif
 
-
-PRODUCT_COPY_FILES += \
-        device/samsung/s2vep/vibration/haptic_vib.apk:system/app/haptic_vib.apk \
-        device/samsung/s2vep/vibration/libImmEmulatorJ.so:system/lib/libImmEmulatorJ.so
-
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 $(call inherit-product, hardware/broadcom/wlan/bcmdhd/config/config-bcm.mk)
