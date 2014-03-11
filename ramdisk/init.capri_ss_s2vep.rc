@@ -57,6 +57,8 @@ on init
     export VIBE_PIPE_PATH /dev/pipes
     mkdir /dev/pipes 0771 shell shell
 
+    chown system system /sys/vibrator/pwm_val
+
     symlink /efs /factory
 
     symlink /dev/block/mmcblk0p11 /dev/block/param
