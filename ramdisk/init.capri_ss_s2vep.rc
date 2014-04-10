@@ -48,8 +48,8 @@ on init
     mkdir   /storage/sdcard1 0700 root root
     symlink /storage/sdcard1 /external_sd
     symlink /storage/sdcard1 /mnt/external_sd
-    symlink /storage/usbdisk0 /usbdisk
-    symlink /storage/usbdisk0 /mnt/usbdisk
+    symlink /storage/usbdisk /usbdisk
+    symlink /storage/usbdisk /mnt/usbdisk
 
     mkdir /preload 0771 system system 
 
