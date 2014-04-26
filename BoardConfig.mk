@@ -90,7 +90,7 @@ BOARD_HAL_STATIC_LIBRARIES := libhealthd.capri
 BOARD_HARDWARE_CLASS := device/samsung/s2vep/cmhw/
 
 # GPS
-TARGET_SPECIFIC_HEADER_PATH := device/samsung/i9082/include
+TARGET_SPECIFIC_HEADER_PATH := device/samsung/s2vep/include
 
 # SELinux
 BOARD_SEPOLICY_DIRS += \
