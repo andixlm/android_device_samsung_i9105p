@@ -43,7 +43,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
 	audio.a2dp.default \
 	audio.usb.default \
-	audio_policy.capri
+	audio_policy_s2vep.capri
 
 # Device-specific packages
 PRODUCT_PACKAGES += \
