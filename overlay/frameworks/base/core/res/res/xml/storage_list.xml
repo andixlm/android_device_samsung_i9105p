@@ -48,5 +48,5 @@ A storage should not have both emulated and removable set to true
              android:storageDescription="@string/storage_usb"
              android:primary="false"
              android:removable="true"
-             android:allowMassStorage="true" />
+             android:allowMassStorage="false" />
 </StorageList>
