@@ -36,6 +36,17 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
 	setup_fs
 
+# F2FS
+PRODUCT_PACKAGES += \
+	mkfs.f2fs \
+	fsck.f2fs \
+	fibmap.f2fs
+
+# Filesystem management tools
+PRODUCT_PACKAGES += \
+	setup_fs \
+	e2fsck
+
 # Usb accessory
 PRODUCT_PACKAGES += \
 	com.android.future.usb.accessory
