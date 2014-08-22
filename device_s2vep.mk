@@ -55,6 +55,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
 	audio.a2dp.default \
 	audio.usb.default \
+	audio.r_submix.default \
 	audio_policy_s2vep.capri
 
 # Device-specific packages
