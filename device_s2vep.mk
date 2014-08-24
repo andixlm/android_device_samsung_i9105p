@@ -7,6 +7,8 @@ $(call inherit-product-if-exists, vendor/samsung/galaxys2plus-common/galaxys2plu
 
 # Use high-density artwork where available
 PRODUCT_LOCALES += hdpi
+PRODUCT_AAPT_CONFIG := normal hdpi
+PRODUCT_AAPT_PREF_CONFIG := hdpi
 
 DEVICE_PACKAGE_OVERLAYS += device/samsung/s2vep/overlay
 
