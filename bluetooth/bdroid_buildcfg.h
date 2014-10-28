@@ -17,6 +17,6 @@
 #ifndef _BDROID_BUILDCFG_H
 #define _BDROID_BUILDCFG_H
 
-#define BTM_DEF_LOCAL_NAME   "GT-I9105P"
+#define BTM_DEF_LOCAL_NAME   "Galaxy S II Plus"
 
 #endif
