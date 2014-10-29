@@ -44,7 +44,7 @@ A storage should not have both emulated and removable set to true
              android:removable="true"
              android:allowMassStorage="true" />
 
-    <storage android:mountPoint="/storage/usbdisk"
+    <storage android:mountPoint="/storage/usbdisk0"
              android:storageDescription="@string/storage_usb"
              android:primary="false"
              android:removable="true"

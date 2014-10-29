@@ -173,5 +173,3 @@ on property:net.setcfg.rndis0=up
 on property:net.setcfg.rndis0=down
 	ifdown rndis0
 	start usb_network
-
-
