@@ -44,11 +44,13 @@ on init
 
     export SECONDARY_STORAGE /storage/sdcard1:/storage/usbdisk0
 
-    mkdir   /storage/sdcard1 0700 root root
-    mkdir   /mnt/media_rw/sdcard1 0700 media_rw media_rw
+    mkdir /storage/sdcard1 0700 root root
+    mkdir /mnt/media_rw/sdcard1 0700 media_rw media_rw
 
-    mkdir   /storage/usbdisk0 0700 root root
-    mkdir   /mnt/media_rw/usbdisk0 0700 media_rw media_rw
+    mkdir /storage/usbdisk0 0755 root root
+    mkdir /mnt/media_rw/usbdisk0 0755 media_rw media_rw
+
+    mkdir /preload 0771 system system
 
     # Vibetonz
     export VIBE_PIPE_PATH /dev/pipes
