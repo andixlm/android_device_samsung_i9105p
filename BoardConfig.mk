@@ -8,10 +8,6 @@ TARGET_KERNEL_SOURCE := kernel/samsung/s2vep
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/s2vep/bluetooth
 
-# Boot animation
-TARGET_SCREEN_WIDTH := 480
-TARGET_SCREEN_HEIGHT := 800
-
 # Recovery
 TARGET_RECOVERY_FSTAB := device/samsung/s2vep/ramdisk/fstab.capri_ss_s2vep
 TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/class/android_usb/android0/f_mass_storage/lun%d/file"
