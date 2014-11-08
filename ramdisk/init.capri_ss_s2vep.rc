@@ -615,13 +615,6 @@ on property:service.adb.root=1
     restart adbd
     write /sys/class/android_usb/android0/enable 1
 
-service powersnd /system/bin/samsungpowersoundplay
-    class main
-    user media
-    group system
-    disabled
-    oneshot
-
 # fusewrapped external sdcard daemon running as media_rw (1023)
 service fuse_sdcard1 /system/bin/sdcard -u 1023 -g 1023 -d /mnt/media_rw/sdcard1 /storage/sdcard1
     class late_start
@@ -702,7 +695,6 @@ on post-fs
     chmod 0771 /efs
 
 ## Daemon processes to be run by init.
-##
 
 on property:ro.debuggable=1
     start console
