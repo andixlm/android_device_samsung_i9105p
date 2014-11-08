@@ -52,13 +52,6 @@ on init
 
     mkdir /preload 0771 system system
 
-    # Vibetonz
-    export VIBE_PIPE_PATH /dev/pipes
-    mkdir /dev/pipes 0771 shell shell
-
-    # Vibrator intensity
-    chown system system /sys/vibrator/pwm_val
-
     symlink /efs /factory
 
     symlink /dev/block/mmcblk0p11 /dev/block/param
@@ -341,9 +334,9 @@ on boot
     chown system radio /sys/class/sensors/magnetic_sensor/vendor
     chown system radio /sys/class/sensors/magnetic_sensor/name
 
-    # Vibetonz
-    chmod 0660 /dev/tspdrv
-    chown root shell /dev/tspdrv
+    # Vibrator intensity
+    chmod 0660 /sys/class/timed_output/vibrator/pwm_value
+    chown system system /sys/class/timed_output/vibrator/pwm_value
 
     mount debugfs /sys/kernel/debug /sys/kernel/debug
     chown system system /sys/class/backlight/panel/brightness
@@ -627,13 +620,6 @@ service powersnd /system/bin/samsungpowersoundplay
     user media
     group system
     disabled
-    oneshot
-
-# Vibetonz
-service immvibed /system/bin/immvibed
-    class core
-    user shell
-    group shell
     oneshot
 
 # fusewrapped external sdcard daemon running as media_rw (1023)
