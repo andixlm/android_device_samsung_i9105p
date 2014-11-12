@@ -1,5 +1,5 @@
 # Include common makefile
-$(call inherit-product, device/samsung/bcm281x5-common/common.mk)
+$(call inherit-product, device/samsung/galaxys2plus-common/common.mk)
 
 LOCAL_PATH := device/samsung/i9105p
 
