@@ -1,2 +1,2 @@
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/full_s2vep.mk
+    $(LOCAL_DIR)/full_i9105p.mk

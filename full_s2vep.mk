@@ -1,9 +1,9 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-$(call inherit-product, device/samsung/s2vep/s2vep.mk)
+$(call inherit-product, device/samsung/i9105p/i9105p.mk)
 
-PRODUCT_DEVICE := s2vep
-PRODUCT_NAME := full_s2vep
+PRODUCT_DEVICE := i9105p
+PRODUCT_NAME := full_i9105p
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := samsung
 PRODUCT_MODEL := GT-I9105P
