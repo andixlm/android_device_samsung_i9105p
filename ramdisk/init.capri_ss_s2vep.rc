@@ -42,13 +42,13 @@ on init
     symlink /storage/emulated/legacy /storage/sdcard0
     symlink /mnt/shell/emulated/0 /storage/emulated/legacy
 
-    export SECONDARY_STORAGE /storage/sdcard1:/storage/usbdisk0
+    export SECONDARY_STORAGE /storage/sdcard1:/storage/usbdisk
 
     mkdir /storage/sdcard1 0700 root root
     mkdir /mnt/media_rw/sdcard1 0700 media_rw media_rw
 
-    mkdir /storage/usbdisk0 0755 root root
-    mkdir /mnt/media_rw/usbdisk0 0755 media_rw media_rw
+    mkdir /storage/usbdisk 0755 root root
+    mkdir /mnt/media_rw/usbdisk 0755 media_rw media_rw
 
     mkdir /preload 0771 system system
 
@@ -612,7 +612,7 @@ service fuse_sdcard1 /system/bin/sdcard -u 1023 -g 1023 -d /mnt/media_rw/sdcard1
     class late_start
     disabled
 
-service fuse_usbdisk0 /system/bin/sdcard -u 1023 -g 1023 /mnt/media_rw/usbdisk0 /storage/usbdisk0
+service fuse_usbdisk /system/bin/sdcard -u 1023 -g 1023 /mnt/media_rw/usbdisk /storage/usbdisk
      class late_start
      disabled
 
