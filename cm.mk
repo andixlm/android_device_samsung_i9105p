@@ -8,6 +8,9 @@ TARGET_SCREEN_HEIGHT := 800
 # Inherit some common CM stuff.
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
+# Enhanced NFC
+$(call inherit-product, vendor/cm/config/nfc_enhanced.mk)
+
 # Inherit device configuration
 $(call inherit-product, device/samsung/i9105p/full_i9105p.mk)
 
