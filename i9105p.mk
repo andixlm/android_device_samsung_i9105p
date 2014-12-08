@@ -3,7 +3,7 @@ $(call inherit-product, device/samsung/galaxys2plus-common/common.mk)
 
 LOCAL_PATH := device/samsung/i9105p
 
-# Init files
+# Init scripts
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/ramdisk/init.capri_ss_s2vep.rc:root/init.capri_ss_s2vep.rc \
 	$(LOCAL_PATH)/ramdisk/init.recovery.capri_ss_s2vep.rc:root/init.recovery.capri_ss_s2vep.rc \
