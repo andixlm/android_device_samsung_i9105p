@@ -55,8 +55,6 @@ on init
     symlink /storage/emulated/legacy /storage/sdcard0
     symlink /mnt/shell/emulated/0 /storage/emulated/legacy
 
-    symlink /efs /factory
-
     symlink /dev/block/mmcblk0p11 /dev/block/param
 
     # We will create our own ril-daemon service with different perm and sockets
