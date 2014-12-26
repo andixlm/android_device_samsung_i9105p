@@ -30,22 +30,11 @@ on init
     mount tmpfs tmpfs /tmp
     chmod 1775 /tmp
 
-    mkdir /preload 0771 system system
-
     mkdir /mnt/shell/emulated 0700 shell shell
     mkdir /storage 0550 system sdcard_r
     mkdir /storage/emulated 0555 root root
 
-    mkdir /storage/sdcard0 0700 root root
-    mkdir /storage/sdcard1 0700 root root
-    mkdir /storage/usbdisk 0700 root root
-
-    mkdir /mnt/media_rw/sdcard0 0700 media_rw media_rw
-    mkdir /mnt/media_rw/sdcard1 0700 media_rw media_rw
-    mkdir /mnt/media_rw/usbdisk 0700 media_rw media_rw
-
     export EXTERNAL_STORAGE /storage/emulated/legacy
-    export SECONDARY_STORAGE /storage/sdcard1
     export EMULATED_STORAGE_SOURCE /mnt/shell/emulated
     export EMULATED_STORAGE_TARGET /storage/emulated
 
@@ -55,9 +44,21 @@ on init
     symlink /storage/emulated/legacy /storage/sdcard0
     symlink /mnt/shell/emulated/0 /storage/emulated/legacy
 
+    # Secondary storage
+    export SECONDARY_STORAGE /storage/sdcard1
+    mkdir /storage/sdcard1 0700 root root
+    mkdir /mnt/media_rw/sdcard1 0700 media_rw media_rw
+
+    # USB storage
+    mkdir /storage/usbdisk 0700 root root
+    mkdir /mnt/media_rw/usbdisk 0700 media_rw media_rw
+
+    # Storage for /dev/block/mmcblk0p20
+    mkdir /preload 0771 system system
+
     symlink /dev/block/mmcblk0p11 /dev/block/param
 
-    # We will create our own ril-daemon service with different perm and sockets
+    # We will create our own ril-daemon service with different perm
     stop ril-daemon
 
 on boot
