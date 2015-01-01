@@ -4,6 +4,6 @@ $(call inherit-product, device/samsung/i9105p/i9105p.mk)
 
 PRODUCT_DEVICE := i9105p
 PRODUCT_NAME := full_i9105p
-PRODUCT_BRAND := samsung
-PRODUCT_MANUFACTURER := samsung
+PRODUCT_BRAND := Samsung
+PRODUCT_MANUFACTURER := Samsung
 PRODUCT_MODEL := GT-I9105P
