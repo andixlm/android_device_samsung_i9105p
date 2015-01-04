@@ -9,13 +9,13 @@
         "remote": "github",
         "repository": "andixlm/android_kernel_samsung_galaxys2plus-common",
         "target_path": "kernel/samsung/galaxys2plus-common",
-        "revision": "cm-11.0"
+        "revision": "kitkat"
     },
     {
         "remote": "github",
         "repository": "andixlm/proprietary_vendor_samsung_galaxys2plus-common",
         "target_path": "vendor/samsung/galaxys2plus-common",
-        "revision": "cm-11.0"
+        "revision": "master"
     },
     {
         "remote": "github",
