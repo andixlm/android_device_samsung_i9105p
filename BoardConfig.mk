@@ -2,6 +2,7 @@
 -include device/samsung/galaxys2plus-common/BoardConfigCommon.mk
 
 # Kernel
+TARGET_KERNEL_SOURCE := kernel/samsung/galaxys2plus-common
 TARGET_KERNEL_CONFIG := cyanogenmod_s2vep_defconfig
 
 # Recovery
