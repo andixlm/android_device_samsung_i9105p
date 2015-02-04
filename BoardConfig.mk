@@ -17,6 +17,3 @@ BOARD_SEPOLICY_DIRS += \
 
 BOARD_SEPOLICY_UNION += \
     file_contexts
-
-# inherit from the proprietary version
--include vendor/samsung/galaxys2plus-common/BoardConfigVendor.mk
