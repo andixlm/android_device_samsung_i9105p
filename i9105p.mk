@@ -26,8 +26,8 @@ NFCEE_ACCESS_PATH := $(LOCAL_PATH)/nfc/nfcee_access.xml
 PRODUCT_COPY_FILES += \
         $(NFCEE_ACCESS_PATH):system/etc/nfcee_access.xml \
         $(LOCAL_PATH)/nfc/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
-        $(LOCAL_PATH)/nfc/firmware/bcm2079xB4_firmware_20793.ncd:system/vendor/firmware/bcm2079xB4_firmware_20793.ncd \
-        $(LOCAL_PATH)/nfc/firmware/bcm2079xB4_pre_firmware_20793.ncd:system/vendor/firmware/bcm2079xB4_pre_firmware_20793.ncd
+        $(LOCAL_PATH)/nfc/bcm2079xB4_firmware_20793.ncd:system/vendor/firmware/bcm2079xB4_firmware_20793.ncd \
+        $(LOCAL_PATH)/nfc/bcm2079xB4_pre_firmware_20793.ncd:system/vendor/firmware/bcm2079xB4_pre_firmware_20793.ncd
 
 # NFC permissions
 PRODUCT_COPY_FILES += \
