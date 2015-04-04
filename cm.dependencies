@@ -3,7 +3,7 @@
         "remote": "github",
         "repository": "andixlm/android_device_samsung_galaxys2plus-common",
         "target_path": "device/samsung/galaxys2plus-common",
-        "revision": "cm-12.0"
+        "revision": "cm-12.1"
     },
     {
         "remote": "github",
@@ -21,12 +21,12 @@
         "remote": "github",
         "repository": "CyanogenMod/android_hardware_samsung",
         "target_path": "hardware/samsung",
-        "revision": "cm-12.0"
+        "revision": "cm-12.1"
     },
     {
         "remote": "github",
         "repository": "CyanogenMod/android_packages_apps_SamsungServiceMode",
         "target_path": "packages/apps/SamsungServiceMode",
-        "revision": "cm-12.0"
+        "revision": "cm-12.1"
     }
 ]
